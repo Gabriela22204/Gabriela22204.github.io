@@ -7,3 +7,4 @@
 - difficulty setting
 - icon
 - game clear event
+<a href="https://gabriela22204.github.io/tictactoe/index.html">Click here to play it</a>
