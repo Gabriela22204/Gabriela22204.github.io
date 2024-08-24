@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+
+    <!-- top nav-->
+     <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                Jogo da Velha
+            </a>
+            <div class="darkmode" id="darkmodetoggle">
+                Dark mode
+            </div>
+        </div>
+     </nav>
+
+
+    <!-- game main-->
+    <div id="app" class="main">
+        <div class="screen">
+            <div id="maingrid" class="maingrid">
+                <!-- 9 cells-->
+                <div id="maingridcell1" class="maingridcell">
+                    <p id="x1" class="x"> </p>
+                </div>
+                <div id="maingridcell2" class="maingridcell">
+                    <p id="x2" class="x"> </p>
+                </div>
+                <div id="maingridcell3" class="maingridcell">
+                    <p id="x3" class="x"> </p>
+                </div>
+                <div id="maingridcell4" class="maingridcell">
+                    <p id="x4" class="x"> </p>
+                </div>
+                <div id="maingridcell5" class="maingridcell">
+                    <p id="x5" class="x"> </p>
+                </div>
+                <div id="maingridcell6" class="maingridcell">
+                    <p id="x6" class="x"> </p>
+                </div>
+                <div id="maingridcell7" class="maingridcell">
+                    <p id="x7" class="x"> </p>
+                </div>
+                <div id="maingridcell8" class="maingridcell">
+                    <p id="x8" class="x"> </p>
+                </div>
+                <div id="maingridcell9" class="maingridcell">
+                    <p id="x9" class="x"> </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- restart the game-->
+     <div class="restartarea">
+        <button type="button" id="btnrestart" class="btnrestart">
+            <div class="restart">Restart</div>
+        </button>
+     </div>
+    <script src="app.js"></script>
+    
+</body>
+</html>
