@@ -3,8 +3,6 @@ body {
     font-family: 'Poppins', serif;
 }
 
-
-
 .nav-container{
     max-width: 1000px;
     margin:auto;
@@ -13,13 +11,33 @@ body {
     justify-content: space-between;
     padding: 40px 60px;
     height: 100%;
+    
 }
-
 .nav-logo{
     font-size: 2rem;
     color: white;
-    
-    
+}
+
+.info-container{
+    max-width: 1000px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.info{
+    height: 70px;
+    width: 200px;
+    border: solid 5px;
+    border-radius: 10px;
+    border-color: #a0747d;
+    background-color: #c18794;
+    color: white;
+    display: grid;
+    place-items: center;
 }
 
 .darkmode{
@@ -65,7 +83,7 @@ body {
     cursor: pointer;
     align-items: center;
     margin:auto;
-    font-family: 'Roboto', serif;
+    font-family: 'Poppins', serif;
 }
 
 .maingridcell.filled{

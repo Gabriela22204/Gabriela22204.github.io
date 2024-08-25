@@ -7,7 +7,7 @@ const btnrestart = document.querySelector('#btnrestart');
 // }
 
 // grid events
-//populate with the click events
+// populate with the click events
 for(let i = 0; i < cells.length; i++){
     cells[i].addEventListener('click', function(){
         setToX(cells[i]);
@@ -16,7 +16,7 @@ for(let i = 0; i < cells.length; i++){
 
 function setToX(cell){
     if(cell.innerHTML == "O" ){
-        console.log("You can't click this!");
+        alert("You can't click this!");
         return;
     }
     cell.innerHTML = "X";
