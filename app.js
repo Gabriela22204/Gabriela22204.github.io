@@ -1,6 +1,8 @@
 const cells = document.getElementById("maingrid").children;
 const btnrestart = document.querySelector('#btnrestart');
 
+const alertcontainer = document.getElementById("infocontainer");
+const alertcontainer1 = document.getElementById("infocontainer1");
 // sleep
 // function sleep(ms) {
 //     return new Promise(resolve => setTimeout(resolve, ms));
@@ -16,7 +18,8 @@ for(let i = 0; i < cells.length; i++){
 
 function setToX(cell){
     if(cell.innerHTML == "O" ){
-        alert("You can't click this!");
+        // alert("You can't click this!");
+        alertbox();
         return;
     }
     cell.innerHTML = "X";
@@ -45,6 +48,10 @@ async function setRandomO(){
     }
     if(filledCells == 9){
         console.log("A tabela está cheia");
+        // call game clear function
+        gameclear();
+        
+        //gameclear();
         return;
     }
     let cellNumber = Math.floor(Math.random() * 9);
@@ -52,4 +59,40 @@ async function setRandomO(){
         cellNumber = Math.floor(Math.random() * 9);
     }
     cells[cellNumber].innerHTML = "O";
+}
+
+// alert message
+function alertbox(){
+    // verify if cells and alertcontainer are valid ements
+    if(!cells  || !alertcontainer){
+        console.error('Elements did not find');
+        return;
+    }
+
+    // verify cells item
+    //console.log('cells item:', cells.innerHTML);
+
+    if(cells.innerHTML !== "X"){
+        //console.log("showing alertcontainer");
+        alertcontainer.style.display = 'flex';
+        setTimeout(() => {
+            alertcontainer.style.display = 'none';
+        }, 1000)
+        
+    } else {
+        //console.log('hiding alertcontainer after 2 seconds')
+        setTimeout(() => {
+            alertcontainer.style.display = 'none';
+        }, 2000);
+    }
+    
+}
+
+// game clear
+function gameclear(){
+    alertcontainer1.style.display = 'flex';
+    setTimeout(() => {
+        alertcontainer1.style.display = 'none';
+    }, 1000)
+    // verify if all cells are completed
 }
