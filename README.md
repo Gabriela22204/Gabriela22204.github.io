@@ -11,3 +11,7 @@
 
 # Fix:
 - make stop the 'O' apper after grid is filled with something
+
+# Update:
+- alertbox fixed;
+- gameclear message added;
