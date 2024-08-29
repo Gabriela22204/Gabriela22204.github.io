@@ -3,7 +3,6 @@
 - se quiser reiniciar limpando tudo aperte no restart
 
 # Toggles to add:
-- darkmode toggle
 - difficulty setting
 - icon
 - game clear event
@@ -12,3 +11,4 @@
 # Update:
 - alertbox fixed;
 - gameclear message added;
+- darkmode toggle fixed;
