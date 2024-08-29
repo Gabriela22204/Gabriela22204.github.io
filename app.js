@@ -3,10 +3,19 @@ const btnrestart = document.querySelector('#btnrestart');
 
 const alertcontainer = document.getElementById("infocontainer");
 const alertcontainer1 = document.getElementById("infocontainer1");
+
+const darkMode = document.querySelector('dark-mode');
+const switchToggle = document.getElementById('switch');
 // sleep
 // function sleep(ms) {
 //     return new Promise(resolve => setTimeout(resolve, ms));
 // }
+
+//dark-mode
+function darkModeToggle(){
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
 
 // grid events
 // populate with the click events
