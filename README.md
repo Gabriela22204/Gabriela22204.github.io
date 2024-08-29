@@ -12,6 +12,7 @@
 - Caixa de alerta corrigida
 - Mensagem de fim de jogo adicionada
 - Botão de modo escuro adicionada
+- Ícone de navegador adicionada
 
 -------------------------------------------------------------
 # Tic-tac-toe
@@ -28,3 +29,4 @@
 - Fixed alert box
 - Added game clear message
 - Added dark mode toggle
+- Added favicon
