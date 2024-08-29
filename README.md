@@ -4,8 +4,8 @@
 
 # Recursos Futuramente Disponíveis:
 - Configurações de dificuldade
-- Ícone
 - Evento de fim de jogo
+- Gráfico que mostra o progresso no jogo
 <a href="https://gabriela22204.github.io/"> Clique aqui para jogar </a>
 
 # Atualizações:
@@ -21,8 +21,8 @@
 
 # Upcoming Features:
 - Difficulty settings
-- Icon
 - Game clear event
+- Progress chart to show game progress
 <a href="https://gabriela22204.github.io/"> Click here to Play </a>
 
 # Update:
