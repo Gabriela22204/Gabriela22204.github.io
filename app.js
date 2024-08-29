@@ -5,13 +5,8 @@ const alertcontainer = document.getElementById("infocontainer");
 const alertcontainer1 = document.getElementById("infocontainer1");
 
 const darkMode = document.querySelector('dark-mode');
-const switchToggle = document.getElementById('switch');
-// sleep
-// function sleep(ms) {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-// }
 
-//dark-mode
+// dark-mode
 function darkModeToggle(){
     var element = document.body;
     element.classList.toggle("dark-mode");
@@ -59,8 +54,6 @@ async function setRandomO(){
         console.log("A tabela está cheia");
         // call game clear function
         gameclear();
-        
-        //gameclear();
         return;
     }
     let cellNumber = Math.floor(Math.random() * 9);
@@ -77,9 +70,6 @@ function alertbox(){
         console.error('Elements did not find');
         return;
     }
-
-    // verify cells item
-    //console.log('cells item:', cells.innerHTML);
 
     if(cells.innerHTML !== "X"){
         //console.log("showing alertcontainer");
