@@ -4,14 +4,15 @@
 
 # Recursos Futuramente Disponíveis:
 - Configurações de dificuldade
-- Ícone
 - Evento de fim de jogo
+- Gráfico que mostra o progresso no jogo
 <a href="https://gabriela22204.github.io/"> Clique aqui para jogar </a>
 
 # Atualizações:
 - Caixa de alerta corrigida
 - Mensagem de fim de jogo adicionada
 - Botão de modo escuro adicionada
+- Ícone de navegador adicionada
 
 -------------------------------------------------------------
 # Tic-tac-toe
@@ -20,11 +21,12 @@
 
 # Upcoming Features:
 - Difficulty settings
-- Icon
 - Game clear event
+- Progress chart to show game progress
 <a href="https://gabriela22204.github.io/"> Click here to Play </a>
 
 # Update:
 - Fixed alert box
 - Added game clear message
 - Added dark mode toggle
+- Added favicon
