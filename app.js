@@ -22,11 +22,11 @@ function clickEvent(){
     }
 }
 
+// call main functions
 clickEvent();
-let arr = createArray(3, 3, cells.innerHTML);
-console.log(arr);
-console.log(cells.innerHTML);
-printArray();
+printArraysPos();
+checkGameState();
+
 
 
 
@@ -65,11 +65,9 @@ async function setRandomO(){
         console.log("A tabela está cheia");
         // call filled function
 
-        // verify cells 
+        // print matrix
         let arr = createArray(3, 3, cells.innerHTML);
         console.log(arr);
-        console.log(cells.innerHTML);
-        printArray();
         Filled();
         return;
     }
@@ -119,20 +117,37 @@ function createArray(rows, cols, initialValue){
     
 }
 
+
 // storage celula's position + value
-function printArray(){
+function printArraysPos(){
     for(let k = 0; k < cells.length; k++){
         cells[k].addEventListener('click', function(){
             // console.log(k);
             let valor = cells[k].innerHTML;
             console.log('valor celula:', k, valor);
-        })
+        });
+
     }
 }
 
-
-
-
+function checkGameState(){
+    checkHorizontal();
+    checkVertical();
+    // checkDiagonal();
+  }
+  
+function checkHorizontal(){
+    for(i = 0; i < 3; i++){
+      if(cells[3*i + 0].innerHTML == cells[3*i + 1].innerHTML == cells[3*i + 2].innerHTML)
+        console.log("O jogo acabou! Vitória na linha " + i);
+    }
+}
+function checkVertical(){
+    for(j = 0; j < 3; j++){
+      if(cells[3*j + 0].innerHTML == cells[3*j + 1].innerHTML == cells[3*j + 2].innerHTML)
+        console.log("O jogo acabou! Vitória na coluna " + j);
+    }
+}
 
 // verify if all cells are competed
 function Filled(){
