@@ -14,11 +14,17 @@ function darkModeToggle(){
 
 // grid events
 // populate with the click events
-for(let i = 0; i < cells.length; i++){
-    cells[i].addEventListener('click', function(){
-        setToX(cells[i]);
-    })
+function clickEvent(){
+    for(let i = 0; i < cells.length; i++){
+        cells[i].addEventListener('click', function(){
+            setToX(cells[i]);
+        })
+    }
 }
+
+clickEvent();
+
+
 
 function setToX(cell){
     if(cell.innerHTML == "O" ){
@@ -52,7 +58,13 @@ async function setRandomO(){
     }
     if(filledCells == 9){
         console.log("A tabela está cheia");
-        // call game clear function
+        // call filled function
+
+        // verify cells 
+        let arr = createArray(3, 3, cells.innerHTML);
+        console.log(arr);
+        console.log(cells.innerHTML);
+        
         Filled();
         return;
     }
@@ -87,13 +99,35 @@ function alertbox(){
     
 }
 
-// game clear
+// game clear ------------
+
+// create array
+function createArray(rows, cols, initialValue){
+    let arr = [];
+    for(let i = 0; i < rows; i++){
+        arr[i] = [];
+        for(let j = 0; j < cols; j++){
+            arr[i][j] = initialValue;
+        }
+    }
+    return arr;
+    
+}
+// storage celula's position + value
+for(let k = 0; k < cells.length; k++){
+    cells[k].addEventListener('click', function(){
+        // console.log(k);
+        let valor = cells[k].innerHTML;
+        console.log('valor celula:',k + valor);
+    })
+}
 
 
+
+// verify if all cells are competed
 function Filled(){
     alertcontainer1.style.display = 'flex';
     setTimeout(() => {
         alertcontainer1.style.display = 'none';
     }, 1000)
-    // verify if all cells are completed
 }
