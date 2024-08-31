@@ -61,13 +61,14 @@ async function setRandomO(){
         }
     }
     if(filledCells == 9){
-        console.log("A tabela está cheia");
-        // call filled function
+        
+        // call check row/col/diagonal function
         checkGameState();
         // print matrix
-        let arr = createArray(3, 3, cells.innerHTML);
-        console.log(arr);
+        // let arr = createArray(3, 3, cells.innerHTML);
+        // console.log(arr);
         Filled();
+        console.log("A tabela está cheia");
         return;
     }
     let cellNumber = Math.floor(Math.random() * 9);
@@ -131,7 +132,7 @@ function printArraysPos(){
 
 function checkGameState(){
     checkHorizontal();
-    // checkVertical();
+    checkVertical();
     // checkDiagonal();
   }
   
@@ -147,6 +148,20 @@ function checkHorizontal(){
             console.log("O jogo acabou! Vitória na linha " + i);
         }
         
+    }
+}
+
+function checkVertical() {
+    for(i = 0; i < 3; i++){
+        let cell1 = cells[i].innerHTML.trim();
+        let cell2 = cells[i + 3].innerHTML.trim();
+        let cell3 = cells[i + 6].innerHTML.trim();
+
+        console.log(`Coluna ${i}:`, cell1, cell2, cell3);
+
+        if( cell1 === cell2 && cell2 === cell3 && cell1 !== ""){
+            console.log("O jogo acabou! Vitória na coluna " + i);
+        }
     }
 }
 
