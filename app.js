@@ -53,7 +53,7 @@ async function setRandomO(){
     if(filledCells == 9){
         console.log("A tabela está cheia");
         // call game clear function
-        gameclear();
+        Filled();
         return;
     }
     let cellNumber = Math.floor(Math.random() * 9);
@@ -88,7 +88,9 @@ function alertbox(){
 }
 
 // game clear
-function gameclear(){
+
+
+function Filled(){
     alertcontainer1.style.display = 'flex';
     setTimeout(() => {
         alertcontainer1.style.display = 'none';
