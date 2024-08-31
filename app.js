@@ -23,6 +23,11 @@ function clickEvent(){
 }
 
 clickEvent();
+let arr = createArray(3, 3, cells.innerHTML);
+console.log(arr);
+console.log(cells.innerHTML);
+printArray();
+
 
 
 
@@ -64,7 +69,7 @@ async function setRandomO(){
         let arr = createArray(3, 3, cells.innerHTML);
         console.log(arr);
         console.log(cells.innerHTML);
-        
+        printArray();
         Filled();
         return;
     }
@@ -113,14 +118,19 @@ function createArray(rows, cols, initialValue){
     return arr;
     
 }
+
 // storage celula's position + value
-for(let k = 0; k < cells.length; k++){
-    cells[k].addEventListener('click', function(){
-        // console.log(k);
-        let valor = cells[k].innerHTML;
-        console.log('valor celula:',k + valor);
-    })
+function printArray(){
+    for(let k = 0; k < cells.length; k++){
+        cells[k].addEventListener('click', function(){
+            // console.log(k);
+            let valor = cells[k].innerHTML;
+            console.log('valor celula:', k, valor);
+        })
+    }
 }
+
+
 
 
 
