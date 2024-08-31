@@ -25,8 +25,7 @@ function clickEvent(){
 // call main functions
 clickEvent();
 printArraysPos();
-checkGameState();
-
+// checkGameState();
 
 
 
@@ -64,7 +63,7 @@ async function setRandomO(){
     if(filledCells == 9){
         console.log("A tabela está cheia");
         // call filled function
-
+        checkGameState();
         // print matrix
         let arr = createArray(3, 3, cells.innerHTML);
         console.log(arr);
@@ -132,22 +131,25 @@ function printArraysPos(){
 
 function checkGameState(){
     checkHorizontal();
-    checkVertical();
+    // checkVertical();
     // checkDiagonal();
   }
   
 function checkHorizontal(){
     for(i = 0; i < 3; i++){
-      if(cells[3*i + 0].innerHTML == cells[3*i + 1].innerHTML == cells[3*i + 2].innerHTML)
-        console.log("O jogo acabou! Vitória na linha " + i);
+        let cell1 = cells[3*i + 0].innerHTML.trim();
+        let cell2 = cells[3*i + 1].innerHTML.trim();
+        let cell3 = cells[3*i + 2].innerHTML.trim();
+        
+        console.log(`Linha ${i}:`, cell1, cell2, cell3);
+
+        if( cell1 === cell2 && cell2 === cell3 && cell1 !== ""){
+            console.log("O jogo acabou! Vitória na linha " + i);
+        }
+        
     }
 }
-function checkVertical(){
-    for(j = 0; j < 3; j++){
-      if(cells[3*j + 0].innerHTML == cells[3*j + 1].innerHTML == cells[3*j + 2].innerHTML)
-        console.log("O jogo acabou! Vitória na coluna " + j);
-    }
-}
+
 
 // verify if all cells are competed
 function Filled(){
