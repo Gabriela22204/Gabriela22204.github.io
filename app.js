@@ -133,7 +133,7 @@ function printArraysPos(){
 function checkGameState(){
     checkHorizontal();
     checkVertical();
-    // checkDiagonal();
+    checkDiagonal();
   }
   
 function checkHorizontal(){
@@ -163,6 +163,29 @@ function checkVertical() {
             console.log("O jogo acabou! Vitória na coluna " + i);
         }
     }
+}
+
+function checkDiagonal(){
+    
+        let cell1 = cells[0].innerHTML.trim();
+        let cell2 = cells[4].innerHTML.trim();
+        let cell3 = cells[8].innerHTML.trim();
+        
+        console.log(`Diagonal Principal`, cell1, cell2, cell3);
+
+        if( cell1 === cell2 && cell2 === cell3 && cell1 !== ""){
+            console.log("O jogo acabou! Vitória na diagonal principal. ");
+        }
+
+        cell1 = cells[2].innerHTML.trim();
+        cell2 = cells[4].innerHTML.trim();
+        cell3 = cells[6].innerHTML.trim();
+    
+        console.log(`Diagonal Secundária:`, cell1, cell2, cell3);
+    
+        if (cell1 === cell2 && cell2 === cell3 && cell1 !== "") {
+            console.log("O jogo acabou! Vitória na diagonal secundária.");
+        }
 }
 
 
