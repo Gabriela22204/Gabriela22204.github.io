@@ -5,6 +5,7 @@
 # Recursos Futuramente Disponíveis:
 - Configurações de dificuldade
 - Evento de fim de jogo
+- Corrigir o bug de clicar na mesma célula
 - Gráfico que mostra o progresso no jogo
 <a href="https://gabriela22204.github.io/"> Clique aqui para jogar </a>
 
