@@ -25,11 +25,8 @@ function clickEvent(){
 // call main functions
 clickEvent();
 printArraysPos();
-// checkGameState();
 
-
-
-
+// alert message
 function setToX(cell){
     if(cell.innerHTML == "O" ){
         // alert("You can't click this!");
@@ -130,11 +127,19 @@ function printArraysPos(){
     }
 }
 
+
+// verify col, row and diagonal
+
 function checkGameState(){
     checkHorizontal();
     checkVertical();
-    // checkDiagonal();
+    checkDiagonal();
   }
+
+function displayMessage(message){
+    const messageBox = document.getElementById('messageBox');
+    messageBox.innerHTML = message; // exibe a mensagem
+}
   
 function checkHorizontal(){
     for(i = 0; i < 3; i++){
@@ -142,10 +147,12 @@ function checkHorizontal(){
         let cell2 = cells[3*i + 1].innerHTML.trim();
         let cell3 = cells[3*i + 2].innerHTML.trim();
         
-        console.log(`Linha ${i}:`, cell1, cell2, cell3);
+        //console.log(`Linha ${i}:`, cell1, cell2, cell3);
 
         if( cell1 === cell2 && cell2 === cell3 && cell1 !== ""){
-            console.log("O jogo acabou! Vitória na linha " + i);
+            //console.log("O jogo acabou! Vitória na linha " + i);
+            displayMessage("O jogo acabou! Vitória na linha " + i);
+            return; // to avoid multiple messages
         }
         
     }
@@ -157,12 +164,41 @@ function checkVertical() {
         let cell2 = cells[i + 3].innerHTML.trim();
         let cell3 = cells[i + 6].innerHTML.trim();
 
-        console.log(`Coluna ${i}:`, cell1, cell2, cell3);
+        //console.log(`Coluna ${i}:`, cell1, cell2, cell3);
 
         if( cell1 === cell2 && cell2 === cell3 && cell1 !== ""){
-            console.log("O jogo acabou! Vitória na coluna " + i);
+            //console.log("O jogo acabou! Vitória na coluna " + i);
+            displayMessage("O jogo acabou! Vitória na coluna " + i);
+            return; // to avoid multiple messages
         }
     }
+}
+
+function checkDiagonal(){
+    
+        let cell1 = cells[0].innerHTML.trim();
+        let cell2 = cells[4].innerHTML.trim();
+        let cell3 = cells[8].innerHTML.trim();
+        
+        //console.log(`Diagonal Principal`, cell1, cell2, cell3);
+
+        if( cell1 === cell2 && cell2 === cell3 && cell1 !== ""){
+            //console.log("O jogo acabou! Vitória na diagonal principal. ");
+            displayMessage("O jogo acabou! Vitória na diagonal principal. ");
+            return;
+        }
+
+        cell1 = cells[2].innerHTML.trim();
+        cell2 = cells[4].innerHTML.trim();
+        cell3 = cells[6].innerHTML.trim();
+    
+        //console.log(`Diagonal Secundária:`, cell1, cell2, cell3);
+    
+        if (cell1 === cell2 && cell2 === cell3 && cell1 !== "") {
+            // console.log("O jogo acabou! Vitória na diagonal secundária.");
+            displayMessage("O jogo acabou! Vitória na diagonal secundária.");
+            return;
+        }
 }
 
 
